@@ -12,12 +12,14 @@
 
 "use strict";
 
+
+
 // global enums
 const GHOSTS = {
-	INKY: 'inky',
-	BLINKY: 'blinky',
-	PINKY: 'pinky',
-	CLYDE: 'clyde'
+	INKY: 'inky', // light blue
+	BLINKY: 'blinky', // dark blue
+	PINKY: 'pinky', // purple
+	CLYDE: 'clyde' // red
 }
 
 // global constants
@@ -38,8 +40,14 @@ function geronimo() {
 
 	var mapConfig = "data/map.json";
 
-
 	/* AJAX stuff */
+
+	// var mooddata = () => {
+	// 	$.get('/ajax', function(res) {
+	// 	$('#val').text(res);
+	// 	});
+	// }
+
 	var getHighscore = () => {
 		setTimeout(ajax_get, 30);
 	}
@@ -165,6 +173,9 @@ function geronimo() {
 		this.pause = true;
 		this.gameOver = false;
 
+		this.mood = new Mood(moodmessage);
+		console.log("HALLO HET WERKT", this.mood)
+
 		this.score = new Score();
 		this.soundfx = 0;
 		this.map;
@@ -203,6 +214,7 @@ function geronimo() {
 		this.ghostMode = 0; // 0 = Scatter, 1 = Chase
 		this.ghostModeTimer = 200; // decrements each animationLoop execution
 		this.ghostSpeedNormal = (this.level > 4 ? 3 : 2); // global default for ghost speed
+		console.log(this.ghostSpeedNormal);
 		this.ghostSpeedDazzled = 2; // global default for ghost speed when dazzled
 
 		/* Game Functions */
@@ -278,7 +290,7 @@ function geronimo() {
 			this.score.set(0);
 			this.score.refresh(".score");
 			pacman.lives = 3;
-			game.level = 1;
+			game.level = 5;
 			this.refreshLevel(".level");
 
 			this.pause = false;
@@ -318,6 +330,16 @@ function geronimo() {
 			$(".lives").html("Lives: " + html);
 
 		};
+
+		//draw mood
+		// this.drawMood = function (reading) {
+		// 	var html = `${reading}`;
+		// 	// for (var i = 0; i < count; i++) {
+		// 	// 	html += " <img src='img/heart.png'>";
+		// 	// }
+		// 	$(".mood").html("Mood: " + html);
+
+		// };
 
 		this.showContent = function (id) {
 			$('.content').hide();
@@ -489,6 +511,7 @@ function geronimo() {
 			pacman.reset();
 
 			game.drawHearts(pacman.lives);
+			// game.drawMood();
 
 			this.ghostFrightened = false;
 			this.ghostFrightenedTimer = 240;
@@ -607,6 +630,26 @@ function geronimo() {
 			/* ------------ End Pre-Build Walls  ------------ */
 		};
 
+		function Mood(data) {
+			this.mood = moodmessage;
+			this.set = function (i) {
+				this.mood = i;
+			};
+			this.refresh = function (h) {
+				console.log("henkie:")
+				console.log(moodmessage);
+				inky.changeSpeed(speedCalculator(moodmessage));
+				blinky.changeSpeed(speedCalculator(moodmessage));
+				pinky.changeSpeed(speedCalculator(moodmessage));
+				clyde.changeSpeed(speedCalculator(moodmessage));
+				// game.ghostSpeedNormal = speedCalculator(moodmessage);
+				console.log(game.ghostSpeedNormal);
+
+				$(h).html("Mood: " + `<img src=${moodimage(moodmessage)} width="50" height="50">`)
+			}
+		}
+	
+
 	}
 
 	game = new Game();
@@ -626,6 +669,73 @@ function geronimo() {
 		};
 
 	}
+
+	// function getMoodMessage(mooddata) {
+	// 	console.log("It worked", mooddata);
+	// };
+
+	function speedCalculator(moodletter) {
+		switch (moodletter) {
+			case 'l':
+				return 3;
+				break;
+			case 'd':
+				return 5;
+				break;
+			case 'p':
+				return 7;
+				break;
+			case 'r':
+				return 10;
+				break;
+			case 'y':
+				return 10;
+				break;
+			default:
+				return 4;
+				break;					
+		};
+	}
+
+	function moodimage(mood) {
+		switch (mood) {
+			case 'l':
+				return "img/lightblue.svg";
+				break;
+			case 'd':
+				return "img/darkblue.svg";
+				break;
+			case 'p':
+				return "img/purple.svg";
+				break;
+			case 'r':
+				return "img/red.svg";
+				break;
+			case 'y':
+				return "img/red.svg";
+				break;
+			default:
+				return "img/lightblue.svg";
+				break;	
+		};
+	}
+
+	// function Mood(data) {
+	// 	this.mood = moodmessage;
+	// 	this.set = function (i) {
+	// 		this.mood = i;
+	// 	};
+	// 	this.refresh = function (h) {
+	// 		console.log("henkie:")
+	// 		console.log(moodmessage);
+	// 		blinky.changeSpeed(speedCalculator(moodmessage));
+	// 		// game.ghostSpeedNormal = speedCalculator(moodmessage);
+	// 		console.log(game.ghostSpeedNormal);
+	// 		$(h).html("Mood: " + moodmessage)
+	// 	}
+	// }
+
+	
 
 
 
@@ -1481,6 +1591,7 @@ function geronimo() {
 	function renderContent() {
 		// Refresh Score
 		game.score.refresh(".score");
+		game.mood.refresh(".mood");
 
 		// Pills
 		context.beginPath();

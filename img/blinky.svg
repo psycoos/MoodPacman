@@ -2,19 +2,19 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="60"
    height="60"
    id="svg3209"
    version="1.1"
-   inkscape:version="0.48.2 r9819"
-   sodipodi:docname="Neues Dokument 11">
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   sodipodi:docname="blinky.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <title
      id="title3238">blinky</title>
   <defs
@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="56.727193"
-     inkscape:cy="-67.066627"
+     inkscape:zoom="4.2323644"
+     inkscape:cx="31.542653"
+     inkscape:cy="4.8436284"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -36,11 +36,12 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1920"
-     inkscape:window-height="1148"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1" />
+     inkscape:window-width="1680"
+     inkscape:window-height="1005"
+     inkscape:window-x="0"
+     inkscape:window-y="23"
+     inkscape:window-maximized="1"
+     inkscape:pagecheckerboard="0" />
   <metadata
      id="metadata3214">
     <rdf:RDF>
@@ -116,5 +117,10 @@
          style="fill:#0000ff;fill-opacity:1"
          sodipodi:type="arc" />
     </g>
+    <path
+       style="fill:#0000ff;stroke-width:0.236275"
+       d="M 5.2766353,59.53319 C 4.5025448,59.081447 3.1962083,56.990696 2.8314458,55.619739 2.2542136,53.450214 2.000467,45.71317 2.2424778,37.661382 2.6169617,25.202173 3.6611058,19.228119 6.3865454,13.951166 8.25692,10.329775 11.276683,7.0200053 15.045462,4.4606757 c 3.9997,-2.7161443 8.445946,-3.75624827 16.018444,-3.74717177 6.187988,0.007417 8.183232,0.43567667 12.873247,2.76311617 8.595189,4.265397 11.803601,8.9323139 13.352477,19.4223359 0.26063,1.765161 0.578868,4.485265 0.707196,6.044677 0.380509,4.623836 0.774768,17.147413 0.680268,21.608461 -0.08162,3.852775 -0.129283,4.227448 -0.675098,5.306625 -0.772157,1.526695 -2.178532,2.530387 -3.758278,2.682179 -1.760167,0.16913 -3.913618,-0.949911 -7.755556,-4.030173 -1.72122,-1.379983 -3.61187,-2.791754 -4.201444,-3.137268 l -1.071949,-0.628204 -0.906075,0.627911 c -0.498341,0.345351 -2.175959,1.821966 -3.728039,3.281365 -3.501128,3.292058 -4.972991,4.287022 -6.044177,4.085801 -0.865571,-0.162599 -3.663515,-1.895498 -5.609513,-3.474237 -3.978836,-3.227931 -5.605381,-4.230789 -6.861963,-4.230789 -0.603011,0 -1.11146,0.359132 -2.785639,1.967576 -2.97037,2.853745 -8.3756868,6.788577 -9.2964353,6.767397 -0.171786,-0.0039 -0.4896178,-0.11064 -0.7062924,-0.237087 z M 50.279029,33.784735 c 2.922411,-0.902639 5.187327,-3.091945 6.326955,-6.115737 0.752639,-1.996988 0.580732,-5.020975 -0.404362,-7.113112 -0.778813,-1.654035 -2.109625,-3.174696 -3.603835,-4.11795 -2.866844,-1.809759 -6.786726,-2.066825 -9.832093,-0.644788 -1.705264,0.796275 -2.99598,1.858778 -4.141122,3.408934 l -0.658063,0.890804 -0.480863,-0.772667 c -0.760469,-1.221948 -2.645604,-2.93304 -3.944647,-3.580459 -5.152524,-2.567925 -11.364304,-0.54486 -13.854912,4.512295 -0.737445,1.497374 -0.784123,1.740168 -0.784123,4.078629 0,2.308729 0.05421,2.600915 0.758272,4.087299 0.955646,2.017509 2.641362,3.687533 4.741695,4.697554 2.151948,1.034843 5.097731,1.215735 7.569872,0.464845 1.995662,-0.606165 4.163139,-2.137836 5.164423,-3.6495 l 0.719978,-1.086969 0.850064,1.234256 c 2.425233,3.521327 7.210438,5.053953 11.572761,3.706566 z"
+       id="path279"
+       transform="translate(620.1475,462.09155)" />
   </g>
 </svg>

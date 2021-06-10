@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="200px"
+   height="200px"
+   viewBox="0 0 200 200"
+   version="1.1"
+   id="SVGRoot"
+   sodipodi:docname="purple.svg"
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview172"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="0.67081229"
+     inkscape:cx="397.27954"
+     inkscape:cy="579.1486"
+     inkscape:window-width="1312"
+     inkscape:window-height="1003"
+     inkscape:window-x="0"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs167" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <ellipse
+       style="fill:#00ffff;stroke-width:0.909539"
+       id="path240"
+       cx="100.11501"
+       cy="100.38818"
+       rx="97.642815"
+       ry="96.897461" />
+    <ellipse
+       style="fill:#00ffff"
+       id="path242"
+       cx="162.48956"
+       cy="137.89252"
+       rx="23.851681"
+       ry="8.1990147" />
+    <path
+       style="fill:#800080;stroke-width:1.49073"
+       d="M 77.393291,193.76158 C 27.644152,181.68236 -4.7661268,131.86422 5.120268,82.670037 12.507603,45.911046 39.855485,16.854642 76.134921,7.2188399 88.663902,3.8911482 110.96689,3.8764409 123.73059,7.1874536 173.75139,20.163281 205.62642,71.134564 194.6298,120.56226 c -7.89703,35.49558 -35.95206,64.19051 -71.58509,73.21782 -10.88827,2.75845 -34.253372,2.74898 -45.651419,-0.0185 z"
+       id="path413" />
+  </g>
+</svg>

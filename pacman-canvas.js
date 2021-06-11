@@ -558,8 +558,9 @@ function geronimo() {
 
 		/* ------------ Start Pre-Build Walls  ------------ */
 		this.buildWalls = function () {
-			if (this.ghostMode === 0) game.wallColor = "Blue";
-			else game.wallColor = "Red";
+			// if (this.ghostMode === 0) 
+			// game.wallColor = "Blue";
+			// else game.wallColor = "Red";
 			canvas_walls = document.createElement('canvas');
 			canvas_walls.width = game.canvas.width;
 			canvas_walls.height = game.canvas.height;
@@ -674,52 +675,110 @@ function geronimo() {
 	// 	console.log("It worked", mooddata);
 	// };
 
+	// function speedCalculator(moodletter) {
+	// 	switch (moodletter) {
+	// 		case 'l':
+	// 			return 3;
+	// 			break;
+	// 		case 'd':
+	// 			return 5;
+	// 			break;
+	// 		case 'p':
+	// 			return 7;
+	// 			break;
+	// 		case 'r':
+	// 			return 10;
+	// 			break;
+	// 		case 'y':
+	// 			return 10;
+	// 			break;
+	// 		default:
+	// 			return 4;
+	// 			break;					
+	// 	};
+	// }
+
+	// function moodimage(mood) {
+	// 	switch (mood) {
+	// 		case 'l':
+	// 			return "img/lightblue.svg";
+	// 			break;
+	// 		case 'd':
+	// 			return "img/darkblue.svg";
+	// 			break;
+	// 		case 'p':
+	// 			return "img/purple.svg";
+	// 			break;
+	// 		case 'r':
+	// 			return "img/red.svg";
+	// 			break;
+	// 		case 'y':
+	// 			return "img/red.svg";
+	// 			break;
+	// 		default:
+	// 			return "img/lightblue.svg";
+	// 			break;	
+	// 	};
+	// }
+
 	function speedCalculator(moodletter) {
-		switch (moodletter) {
-			case 'l':
-				return 3;
-				break;
-			case 'd':
-				return 5;
-				break;
-			case 'p':
-				return 7;
-				break;
-			case 'r':
-				return 10;
-				break;
-			case 'y':
-				return 10;
-				break;
-			default:
-				return 4;
-				break;					
-		};
-	}
+        switch (moodletter) {
+            case 'l':
+                return 2;
+                break;
+            case 'd':
+                return 3;
+                break;
+            case 'p':
+                return 5;
+                break;
+            case 'r':
+                return 6;
+                break;
+            case 'y':
+                return 6;
+                break;
+            default:
+                return 3;
+                break;
+        };
+    }
+ 
+    function moodimage(mood) {
+        switch (mood) {
+            case 'l':
+                game.wallColor = '#00ffff';
+                game.buildWalls();
+                return "img/lightblue.svg";
+                break;
+            case 'd':
+                game.wallColor = '#0000ff';
+                game.buildWalls();
+                return "img/darkblue.svg";
+                break;
+            case 'p':
+                game.wallColor = '#800080';
+                game.buildWalls();
+                return "img/purple.svg";
+                break;
+            case 'r':
+                game.wallColor = '#ff0000';
+                game.buildWalls();
+                return "img/red.svg";
+                break;
+            case 'y':
+                game.wallColor = '#ff0000';
+                game.buildWalls();
+                return "img/red.svg";
+                break;
+            default:
+                game.wallColor = '#32ff24';
+                game.buildWalls();
+                return "img/lightblue.svg";
+                break;
+        };
 
-	function moodimage(mood) {
-		switch (mood) {
-			case 'l':
-				return "img/lightblue.svg";
-				break;
-			case 'd':
-				return "img/darkblue.svg";
-				break;
-			case 'p':
-				return "img/purple.svg";
-				break;
-			case 'r':
-				return "img/red.svg";
-				break;
-			case 'y':
-				return "img/red.svg";
-				break;
-			default:
-				return "img/lightblue.svg";
-				break;	
-		};
-	}
-
+	}	
 	// function Mood(data) {
 	// 	this.mood = moodmessage;
 	// 	this.set = function (i) {

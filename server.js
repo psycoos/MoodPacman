@@ -3,6 +3,8 @@ var app = express();
 var path = require('path');
 var http = require('http');
 var server = http.createServer(app);    
+var fs = require('fs'); 
+
 const { Server } = require("socket.io");
 const io = new Server(server);
 
@@ -44,6 +46,9 @@ parser.on('data', data =>{
     mooddata = data;
     console.log(mooddata);
     io.emit('mood', mooddata);
+    fs.appendFile('GSRdata.txt', mooddata, function (err) {
+        if (err) throw err;
+    }); 
 });
 
 server.listen(3000, () => {
@@ -56,6 +61,14 @@ io.on('connection', (socket) => {
     // socket.on("ping", (mooddata) => {
     //     io.emit('mood', mooddata);
     //   });
+
+    fs.writeFile('GSRdata.txt', '', function (err) {
+        if (err) throw err;
+        console.log('Saved!');
+    }); 
+    fs.appendFile('GSRdata.txt', `${Date.now()} \n`, function (err) {
+        if (err) throw err;
+    });   
 });
 
 
